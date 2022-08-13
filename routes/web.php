@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Siswa;
+use App\Models\Pegawai;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\PegawaiController;
@@ -16,7 +18,15 @@ use App\Http\Controllers\PegawaiController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $jumlahpegawai = Pegawai::count();
+    $pegawaicowo = Pegawai::where('kelamin','L')->count();
+    $pegawaicewe = Pegawai::where('kelamin','P')->count();
+
+    $jumlahsiswa = Siswa::count();
+    $muridcowo = Siswa::where('kelamin','L')->count();
+    $muridcewe = Siswa::where('kelamin','P')->count();
+
+    return view('welcome',compact('jumlahpegawai','jumlahsiswa','pegawaicowo','pegawaicewe','muridcowo','muridcewe'));
 });
 
 Route::get('/pegawai', [PegawaiController::class, 'index'])->name('pegawai');

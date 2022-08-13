@@ -6,14 +6,8 @@
   <div class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
-        <div class="col-sm-6">
-          <h1 class="m-0">Dashboard v2</h1>
-        </div><!-- /.col -->
-        <div class="col-sm-6">
-          <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Dashboard v2</li>
-          </ol>
+        <div class="col-sm-12">
+          <h1 class="m-auto">Selamat Datang di SMKN 11 BANDUNG Data Center!</h1>
         </div><!-- /.col -->
       </div><!-- /.row -->
     </div><!-- /.container-fluid -->
@@ -25,15 +19,55 @@
     <div class="container-fluid">
       <!-- Info boxes -->
       <div class="row">
+        <div class="col-12 col-sm-6 col-md-6">
+          <a href="/pegawai">
+            <div class="info-box">
+              <span class="info-box-icon bg-primary elevation-1"><i class="fas fa-users"></i></span>
+  
+              <div class="info-box-content">
+                <span class="info-box-text">Jumlah Pegawai</span>
+                <span class="info-box-number">
+                  {{ $jumlahpegawai }}
+                  <small>Orang</small>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </a>
+        </div>
+        <!-- /.col -->
+        <div class="col-12 col-sm-6 col-md-6">
+          <a href="/siswa">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-graduation-cap"></i></span>
+  
+              <div class="info-box-content">
+                <span class="info-box-text">Jumlah Siswa</span>
+                <span class="info-box-number">
+                  {{ $jumlahsiswa }}
+                  <small>Orang</small>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </a>
+        </div>
+        <!-- /.col -->
+
+        <!-- fix for small devices only -->
+        <div class="clearfix hidden-md-up"></div>
+
         <div class="col-12 col-sm-6 col-md-3">
-          <div class="info-box">
-            <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+          <div class="info-box mb-3">
+            <span class="info-box-icon bg-success elevation-1"><i class="fas fa-person"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">CPU Traffic</span>
+              <span class="info-box-text">Pegawai Laki-laki</span>
               <span class="info-box-number">
-                10
-                <small>%</small>
+                {{ $pegawaicowo }}
+                <small>Orang</small>
               </span>
             </div>
             <!-- /.info-box-content -->
@@ -43,28 +77,14 @@
         <!-- /.col -->
         <div class="col-12 col-sm-6 col-md-3">
           <div class="info-box mb-3">
-            <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+            <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-person-dress"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Likes</span>
-              <span class="info-box-number">41,410</span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-
-        <!-- fix for small devices only -->
-        <div class="clearfix hidden-md-up"></div>
-
-        <div class="col-12 col-sm-6 col-md-3">
-          <div class="info-box mb-3">
-            <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Sales</span>
-              <span class="info-box-number">760</span>
+              <span class="info-box-text">Pegawai Perempuan</span>
+              <span class="info-box-number">
+                {{ $pegawaicewe }}
+                <small>Orang</small>
+              </span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -73,21 +93,46 @@
         <!-- /.col -->
         <div class="col-12 col-sm-6 col-md-3">
           <div class="info-box mb-3">
-            <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+            <span class="info-box-icon bg-success elevation-1"><i class="fa-solid fa-child"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">New Members</span>
-              <span class="info-box-number">2,000</span>
+              <span class="info-box-text">Siswa Laki-laki</span>
+              <span class="info-box-number">
+                {{ $muridcowo }}
+                <small>Orang</small>
+              </span>
             </div>
             <!-- /.info-box-content -->
           </div>
           <!-- /.info-box -->
         </div>
         <!-- /.col -->
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="info-box mb-3">
+            <span class="info-box-icon bg-danger elevation-1"><i class="fa-solid fa-child-dress"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Siswa Perempuan</span>
+              <span class="info-box-number">
+                {{ $muridcewe }}
+                <small>Orang</small>
+              </span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-12 col-sm-6 col-md-6 text-center">
+          <a href="/tambahpegawai" class="btn btn-success"><span><i class="fa-solid fa-plus"></i></span>&nbsp;&nbsp;Tambah Data</a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 text-center">
+          <a href="/tambahsiswa" class="btn btn-success"><span><i class="fa-solid fa-plus"></i></span>&nbsp;&nbsp;Tambah Data</a>
+        </div>
       </div>
       <!-- /.row -->
 
-      <div class="row">
+      {{-- <div class="row">
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
@@ -851,7 +896,7 @@
         </div>
         <!-- /.col -->
       </div>
-      <!-- /.row -->
+      <!-- /.row --> --}}
     </div><!--/. container-fluid -->
   </section>
   <!-- /.content -->

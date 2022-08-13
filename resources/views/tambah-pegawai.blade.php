@@ -1,5 +1,4 @@
-    <title>Add Employee Data</title>
-
+<title>Add Employee Data</title>
 @extends('layout.admin')
 
 @section('content')

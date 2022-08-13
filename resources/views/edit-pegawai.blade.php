@@ -1,6 +1,3 @@
-
-    <title>Edit Employee Data</title>
-
 @extends('layout.admin')
 
 @section('content')
@@ -37,6 +34,5 @@
           <button type="submit" class="btn btn-primary mb-5">Submit</button>
         </form>
     </div>
-</div>
 </div>
 @endsection

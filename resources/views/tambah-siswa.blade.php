@@ -1,5 +1,7 @@
 @extends('layout.admin')
 
+<title>Tambahkan Data Siswa</title>
+
 @section('content')
 <div class="content-wrapper">
   <div class="content-header">
