@@ -3,6 +3,7 @@
 use App\Models\Siswa;
 use App\Models\Pegawai;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KartuController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\PegawaiController;
 
@@ -53,3 +54,5 @@ Route::get('/showdata/{nis}', [SiswaController::class, 'showdata'])->name('tampi
 Route::post('/updatesiswa/{nis}', [SiswaController::class, 'updatesiswa'])->name('updatesiswa');
 
 Route::get('/deletesiswa/{nis}', [SiswaController::class, 'deletesiswa'])->name('deletesiswa');
+
+Route::get('/kartu-siswa', [SiswaController::class, 'showkartu'])->name('kartu-siswa');

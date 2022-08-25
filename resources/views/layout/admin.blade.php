@@ -69,6 +69,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="/kartu-siswa" class="nav-link">
+                <i class="fa-solid fa-id-card"></i>
+              <p>
+                &nbsp;Kartu Pelajar
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="/pegawai" class="nav-link">
                 <i class="fa-solid fa-users"></i>
               <p>

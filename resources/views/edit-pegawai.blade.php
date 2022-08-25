@@ -8,6 +8,7 @@
           <h1 class="m-0 text-center">Edit Data Pegawai</h1>
       </div><!-- /.row -->
     </div><!-- /.container-fluid -->
+  </div>
     <div class="container mt-5 w-50 mx-auto d-block px-5">
         <form action="/updatedata/{{ $data->replid }}" method="POST">
           @csrf
@@ -34,5 +35,4 @@
           <button type="submit" class="btn btn-primary mb-5">Submit</button>
         </form>
     </div>
-</div>
 @endsection

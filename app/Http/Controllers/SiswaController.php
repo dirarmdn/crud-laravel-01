@@ -12,6 +12,11 @@ class SiswaController extends Controller
         $data = Siswa::all();
         return view('data-siswa', compact('data'));
     }
+
+    public function showkartu(Request $request){
+        $data = Siswa::simplePaginate(1);
+        return view('kartu-siswa', compact('data'));
+    }
     
     public function tambahsiswa(){
         return view('tambah-siswa');
